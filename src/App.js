@@ -17,7 +17,7 @@ function App() {
 
     try {
       setLoading(true);
-      const res = await axios.post(`${import.meta.env.VITE_API_URL}/analyze`, formData, {
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/analyze`, formData, {
   headers: {
     'Content-Type': 'multipart/form-data',
   },
