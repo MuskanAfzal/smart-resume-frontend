@@ -1,0 +1,130 @@
+/* Base styles */
+body {
+  background: #0f172a;
+  color: #e0f7fa;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background: #1e293b;
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 255, 255, 0.1);
+  padding: 2rem;
+  max-width: 650px;
+  margin: 3rem auto;
+  border: 1px solid #334155;
+  box-sizing: border-box;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  color: #38bdf8;
+  margin-bottom: 1.5rem;
+}
+
+.file-input {
+  background: #0f172a;
+  border: 1px solid #334155;
+  color: #e0f7fa;
+  padding: 0.5rem;
+  border-radius: 6px;
+  width: 100%;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+
+.analyze-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #06b6d4, #3b82f6);
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.analyze-btn:hover {
+  background: #0284c7;
+}
+
+.section {
+  background: #0f172a;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  border-left: 4px solid #38bdf8;
+  border-radius: 8px;
+}
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #67e8f9;
+}
+
+.bullet-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.bullet {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.bullet::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #38bdf8;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .container {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .section-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin: 1rem 0.5rem;
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .file-input, .analyze-btn {
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+
+  .section-title {
+    font-size: 1rem;
+  }
+
+  .bullet {
+    padding-left: 1.2rem;
+  }
+
+  .bullet::before {
+    left: 0;
+  }
+}
