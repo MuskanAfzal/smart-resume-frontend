@@ -17,7 +17,7 @@ function App() {
 
     try {
       setLoading(true);
-      const res = await axios.post('https://smart-resume-backend-production.up.railway.app', formData);
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/analyze`, formData);
       setFeedback(formatFeedback(res.data.feedback));
     } catch (err) {
       alert('Error uploading resume.');
