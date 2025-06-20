@@ -17,7 +17,7 @@ function App() {
 
     try {
       setLoading(true);
-      const res = await axios.post('http://localhost:5000/analyze', formData);
+      const res = await axios.post('https://smart-resume-backend-production.up.railway.app', formData);
       setFeedback(formatFeedback(res.data.feedback));
     } catch (err) {
       alert('Error uploading resume.');
