@@ -17,7 +17,11 @@ function App() {
 
     try {
       setLoading(true);
-      const res = await axios.post(`${import.meta.env.VITE_API_URL}/analyze`, formData);
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/analyze`, formData, {
+  headers: {
+    'Content-Type': 'multipart/form-data',
+  },
+});
       setFeedback(formatFeedback(res.data.feedback));
     } catch (err) {
       alert('Error uploading resume.');
